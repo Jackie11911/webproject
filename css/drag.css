@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    width: 600px;
+    margin:0 auto;
+}
+
+li{
+    list-style: none;
+}
+
+li{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+li img{
+    width: 100px;
+    height: 100px;
+}
+
+#div1{
+    width: 600px;
+    height: 650px;
+    border: 1px black solid;
+    clear: both;
+    margin: 0 auto;
+}
+
+.box1{
+    height: 100px;
+    position: relative;
+    width: 600px;
+    border-bottom: 1px black solid;
+}
+
+.box2{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    float: left;
+}
+
+.box3{
+    position: relative;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+}

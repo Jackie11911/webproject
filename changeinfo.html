@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>信息切换</title>
+        <link rel="stylesheet" href="css/changeinfo.css">
+        <script type="text/javascript" src="js/changeinfo_datas.js"></script>
+        <script>
+            window.onload=function(){
+                var HeadUl=document.getElementById("header");
+                var Con=document.getElementById("container");
+                var LisCon=document.getElementById("listContent");
+                var Tip=document.getElementById("tips");
+                var TipCon=document.getElementById("tipsContent");
+
+                for(var i=0;i<data.length;i++){
+                    HeadUl.innerHTML+="<li>"+data[i].classNum+"</li>"
+                }
+
+                var lis=HeadUl.getElementsByTagName("li");
+                lis[0].className="chosen";
+
+                for(var i=0;i<lis.length;i++){
+                    lis[i].index=i;
+                    lis[i].onclick=function(){
+                        /*初始化*/
+                        for(var j=0;j<lis.length;j++){
+                            lis[j].className="";
+                            LisCon.innerHTML="";
+                            TipCon.innerHTML="";
+                        }
+                        this.className="chosen";
+                        show(data[this.index]);
+                    }
+                }
+                show(data[0]);
+
+                function show(Data){
+                    for(var i=0;i<Data.list.length;i++){
+                        var ul=document.createElement("ul");
+                        var li=document.createElement("li");
+                        var a=document.createElement("a");
+                        a.innerHTML=Data.list[i].name;
+                        a.href="";
+                        li.appendChild(a);
+                        ul.appendChild(li);
+                        LisCon.appendChild(ul);
+                        a.index=i;
+                        var lis1=document.createElement("li");
+                        lis1.className="col";
+                        var lis2=document.createElement("li");
+                        lis2.className="col";
+                        var lis3=document.createElement("li");
+                        lis3.className="col";
+
+                        a.onmouseover=function(){
+                            Tip.style.display="block";
+                            Tip.style.left=Con.offsetLeft+this.offsetWidth+10+'px';
+                            Tip.style.top=this.offsetTop+'px';
+                            lis1.innerHTML='语文：'+Data.list[this.index].chinese;
+                            lis2.innerHTML='数学：'+Data.list[this.index].math;
+                            lis3.innerHTML='英语：'+Data.list[this.index].english;
+                            TipCon.appendChild(lis1);
+                            TipCon.appendChild(lis2);
+                            TipCon.appendChild(lis3);
+                        }
+
+                        li.onmouseout=function(){
+                            Tip.style.display="none";
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <ul id="header"></ul>
+            <div id="listContent"></div>
+        </div>
+        <div id="tips">
+            <span id="mouse"></span>
+            <div id="tipsContent"></div>
+        </div>
+    </body>
+</html>

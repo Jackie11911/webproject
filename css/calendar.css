@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar{
+    width: 316px;
+    height: fit-content;
+    background: orange;
+}
+
+.calendar-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 15px;
+    border-bottom: 19px;
+}
+
+.calendar-bar .current-month{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: red;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.calendar-bar .btn{
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: black;
+    background: rgb(236, 230, 230);
+    border: none;
+    border-radius: 50%;
+}
+
+.weekdays-name{
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 18px;
+    padding-top: 12px;
+}
+
+.calendar-days{
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 18px;
+    padding-bottom: 12px;
+}
+
+.weekdays-name{
+    padding-top: 12px;
+}
+
+.days-name{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 1000;
+    font-size: 16px;
+}
+
+.month-day{
+    width: 40px;
+    height: 40px;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 1000;
+    font-size: 16px;
+}
+
+.goto_buttons{
+    border-top: solid 2px yellow;
+    padding-block: 18px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.goto_buttons .gotobtn{
+    background: rgb(236, 230, 230);
+    border: none;
+    border-radius: 10px;
+    padding: 11px 13px;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 1px;
+}
+
+.btn:hover,.month-day:hover,.gotobtn:hover{
+    border-radius: 5px;
+    background-color: #fff;
+    color: black;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.current-day{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-weight: 1000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*不是本月的天数*/
+.padding-day{
+    width: 40px;  
+    height: 40px;  
+    text-align: center;
+    line-height: 40px;  
+    font-weight: 500;  
+    font-size: 16px;
+    color:grey;
+    user-select: none;
+}
+
+
+
+

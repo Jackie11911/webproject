@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loading</title>
+        <style>
+            .box{
+                position: absolute;
+                height: 160px;
+                width: 160px;
+                background-color:#fff;
+                margin: auto;
+            }
+            .box2{
+                position: absolute;
+                width: 80px;
+                overflow: hidden;
+                top: 0;
+                bottom: 0;
+                left: 80px;
+            }
+            .semicir{
+                width: 80px;
+                height: 160px;
+                background-color:red;
+            }
+            .conr{
+                left: 80px;
+            }
+            .conr .semicir{
+                left: 0;
+                border-radius: 0 160px 160px 0;
+                transform-origin: 0 50%;
+                animation: semicir1 4s linear infinite;
+            }
+            @keyframes semicir1 {
+                0%{
+                    transform: rotateZ(-180deg);
+                }
+                50%,100%{
+                    transform: rotateZ(0);
+                }
+            }
+            .conl{
+                left: 0;
+            }
+            .conl .semicir{
+                left: 0;
+                border-radius: 160px 0 0 160px;
+                transform-origin: 100% 50%;
+                animation: semicir2 4s infinite linear;
+            }
+            @keyframes semicir2 {
+                0%, 50% {
+                    transform: rotateZ(-180deg);
+                }
+                100%{
+                    transform: rotateZ(0);
+                }
+            }
+            .box::after{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 120px;
+                height: 120px;
+                background: #fff;
+                border-radius: 50%;
+                content: "";
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="box2 conr">
+                <div class="semicir"></div>
+            </div>
+            <div class="box2 conl">
+                <div class="semicir"></div>
+            </div>
+        </div>
+    </body>
+</html>

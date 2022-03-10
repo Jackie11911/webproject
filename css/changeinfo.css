@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 13px;
+}
+
+ul{
+    list-style: none;
+}
+
+#container{
+    width: 1000px;
+    margin: 150px auto;
+}
+
+#header{
+    border-bottom: 3px solid #F60;height: 30px;
+}
+
+#header li{
+    font-weight: bolder;
+    float: left;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#header li:hover{
+    cursor: pointer;
+}
+
+#header .chosen{
+    background: #F60;
+    color: #fff;
+}
+
+#listContent li{
+    font-size: 16px;
+    line-height: 30px;
+    height: 30px;
+    color: black;
+}
+
+#tips{
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    border: 2px solid #F60;
+    background-color: #fff;
+    display: none;
+}
+
+#tips li{
+    list-style: none;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#tips li.col{
+    width: 100px;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    border-bottom: 1px solid black;
+}

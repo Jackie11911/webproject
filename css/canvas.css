@@ -1,0 +1,52 @@
+body{
+    background: #fff;
+}
+
+#box{
+    width: 800px;
+    height: 600px;
+    margin: 60px auto;
+    border: 3px black solid;
+}
+
+#ToolBar{
+    width: 800px;
+    height: 50px;
+    border-bottom: 1px black solid;
+}
+
+#can{
+    display: inline-block;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 5px;
+}
+
+input{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 5px;
+}
+
+.pen{
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/canvas/pen.jpg);  
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.rubber{
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/canvas/rubber.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
