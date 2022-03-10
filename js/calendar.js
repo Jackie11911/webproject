@@ -12,13 +12,15 @@ window.onload=function(){
         const startDay = new Date(date.getFullYear(),date.getMonth(),1).getDay();//这个月第一天是星期几
         ocalendarDays.innerHTML="";
         let totalCalendarDay=42;
-        for(let i=0;i<totalCalendarDay;i++){
+        let temp = startDay;
+        while(temp>=0){
+            //加上上个月的一些日期
+            ocalendarDays.innerHTML += `<div class='padding-day'>${prevLastDay-temp}</div>`;
+            temp--;
+        }
+        for(let i=startDay+1;i<totalCalendarDay;i++){
             let day = i-startDay;
-            if(i<=startDay){
-                //加上上一个月的一些日期
-                ocalendarDays.innerHTML += `<div class='padding-day'>${prevLastDay-i}</div>`;
-            }
-            else if(i<=startDay+totalMonthDay){
+            if(i<=startDay+totalMonthDay){
                 date.setDate(day);
                 date.setHours(0,0,0,0);
                 let dayClass;
